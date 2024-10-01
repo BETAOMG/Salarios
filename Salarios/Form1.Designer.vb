@@ -55,6 +55,7 @@ Partial Class Form1
         TextBox2.Location = New Point(41, 65)
         TextBox2.Multiline = True
         TextBox2.Name = "TextBox2"
+        TextBox2.ScrollBars = ScrollBars.Vertical
         TextBox2.Size = New Size(205, 202)
         TextBox2.TabIndex = 2
         ' 
