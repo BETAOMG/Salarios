@@ -32,6 +32,8 @@ Partial Class Form1
         TextBox4 = New TextBox()
         TextBox5 = New TextBox()
         Button1 = New Button()
+        Button2 = New Button()
+        Button3 = New Button()
         SuspendLayout()
         ' 
         ' Label1
@@ -71,7 +73,7 @@ Partial Class Form1
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Location = New Point(41, 315)
+        Label3.Location = New Point(47, 317)
         Label3.Name = "Label3"
         Label3.Size = New Size(153, 15)
         Label3.TabIndex = 4
@@ -117,11 +119,31 @@ Partial Class Form1
         Button1.Text = "Calcular"
         Button1.UseVisualStyleBackColor = True
         ' 
+        ' Button2
+        ' 
+        Button2.Location = New Point(118, 376)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(91, 23)
+        Button2.TabIndex = 10
+        Button2.Text = "Calcular otro"
+        Button2.UseVisualStyleBackColor = True
+        ' 
+        ' Button3
+        ' 
+        Button3.Location = New Point(218, 376)
+        Button3.Name = "Button3"
+        Button3.Size = New Size(75, 23)
+        Button3.TabIndex = 11
+        Button3.Text = "Cerrar"
+        Button3.UseVisualStyleBackColor = True
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(942, 483)
+        Controls.Add(Button3)
+        Controls.Add(Button2)
         Controls.Add(Button1)
         Controls.Add(TextBox5)
         Controls.Add(TextBox4)
@@ -148,4 +170,6 @@ Partial Class Form1
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents TextBox5 As TextBox
     Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
 End Class

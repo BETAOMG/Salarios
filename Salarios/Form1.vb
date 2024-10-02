@@ -26,7 +26,7 @@
             Codigo = Val(InputBox("Ingrese el codigo del empleado " + Nombre))
             Hijos = Val(InputBox("Ingrese el numero de hijos del empleado " + Nombre))
             SalarioBruto = Val(InputBox("Ingrese el salario bruto del empleado " + Nombre))
-            TextBox2.Text = TextBox2.Text + "Empleado " + Nombre + vbCrLf
+            TextBox2.Text = TextBox2.Text + "Empleado" + Str(i) + vbCrLf
             If SalarioBruto <= 1200000 Then
                 Retencion = SalarioBruto * 0.05
             End If
@@ -51,15 +51,29 @@
             SumaSubsidios += Subsidio
             SumaRetencion += Retencion
 
-            TextBox2.Text = TextBox2.Text + "Nombre: " + Chr(9) + Str(i) + vbCrLf + "Codigo: " + Chr(9) + Str(Codigo) + vbCrLf + "Salario bruto: " + Chr(9) + Str(SalarioBruto) + vbCrLf + "Salario neto: " + Chr(9) + Str(SalarioNeto) + vbCrLf
+            TextBox2.Text = TextBox2.Text + "Nombre:" + Chr(9) + Nombre + vbCrLf + "Codigo:" + Chr(9) + Str(Codigo) + vbCrLf + "Salario bruto:" + Chr(9) + Str(SalarioBruto) + vbCrLf + "Salario neto:" + Chr(9) + Str(SalarioNeto) + vbCrLf
             If Subsidio > 0 Then
-                TextBox2.Text = TextBox2.Text + "Subsidio: " + Chr(9) + Str(Subsidio) + vbCrLf
+                TextBox2.Text = TextBox2.Text + "Subsidio:" + Chr(9) + Str(Subsidio) + vbCrLf
             End If
-            TextBox2.Text = TextBox2.Text + "Retención: " + Chr(9) + Str(Retencion) + vbCrLf + "Total a pagar: " + Chr(9) + Str(TotalPagar) + vbCrLf + vbCrLf
+            TextBox2.Text = TextBox2.Text + "Retención:" + Chr(9) + Str(Retencion) + vbCrLf + "Total a pagar:" + Chr(9) + Str(TotalPagar) + vbCrLf + vbCrLf
         Next
 
+        TextBox3.Text = SumaRetencion
+        TextBox4.Text = SumaSubsidios
+        TextBox5.Text = SumaSalarios / CuentaSalarios
 
+    End Sub
 
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        TextBox1.Text = ""
+        TextBox2.Text = ""
+        TextBox3.Text = ""
+        TextBox4.Text = ""
+        TextBox5.Text = ""
+        TextBox1.Focus()
+    End Sub
 
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Me.Close()
     End Sub
 End Class
