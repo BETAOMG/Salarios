@@ -38,10 +38,10 @@
             End If
             SalarioNeto = SalarioBruto - Retencion
             If Hijos <= 5 Then
-                Subsidio = (SalarioNeto * 0.03) * Hijos
+                Subsidio = (SalarioBruto * 0.03) * Hijos
             End If
             If Hijos > 5 Then
-                Subsidio = (SalarioNeto * 0.03) * 5
+                Subsidio = (SalarioBruto * 0.03) * 5
             End If
             TotalPagar = SalarioNeto + Subsidio
             If TotalPagar > 3000000 Then
@@ -57,7 +57,6 @@
             End If
             TextBox2.Text = TextBox2.Text + "Retención:" + Chr(9) + Str(Retencion) + vbCrLf + "Total a pagar:" + Chr(9) + Str(TotalPagar) + vbCrLf + vbCrLf
         Next
-
         TextBox3.Text = SumaRetencion
         TextBox4.Text = SumaSubsidios
         TextBox5.Text = SumaSalarios / CuentaSalarios
